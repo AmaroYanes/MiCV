@@ -1,5 +1,6 @@
 package dad.javafx.miCV.clases;
 
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import javafx.beans.property.ListProperty;
@@ -48,7 +49,7 @@ public class CV {
 	public final ListProperty<Titulo> tituloProperty() {
 		return this.titulo;
 	}
-	
+	@XmlElement
 	public Personal getPersonal() {
 		return personal;
 	}
@@ -56,7 +57,7 @@ public class CV {
 	public void setPersonal(Personal personal) {
 		this.personal = personal;
 	}
-
+	@XmlElement
 	public Contacto getContacto() {
 		return contacto;
 	}
@@ -64,7 +65,7 @@ public class CV {
 	public void setContacto(Contacto contacto) {
 		this.contacto = contacto;
 	}
-
+	@XmlElement
 	public final ObservableList<Titulo> getTitulo() {
 		return this.tituloProperty().get();
 	}
@@ -76,7 +77,7 @@ public class CV {
 	public final ListProperty<Experiencia> experienciaProperty() {
 		return this.experiencia;
 	}
-	
+	@XmlElement
 	public final ObservableList<Experiencia> getExperiencia() {
 		return this.experienciaProperty().get();
 	}
@@ -88,7 +89,7 @@ public class CV {
 	public final ListProperty<Conocimiento> conocimientoProperty() {
 		return this.conocimiento;
 	}
-	
+	@XmlElement
 	public final ObservableList<Conocimiento> getConocimiento() {
 		return this.conocimientoProperty().get();
 	}

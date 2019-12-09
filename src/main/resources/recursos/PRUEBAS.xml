@@ -1,30 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <cv>
-    <conocimiento>
-        <denominacion>SDEF</denominacion>
-        <nivel>MEDIO</nivel>
-    </conocimiento>
-    <conocimiento>
-        <denominacion>asd(23)</denominacion>
-        <nivel>AVANZADO</nivel>
-    </conocimiento>
+    <conocimiento denominacion="sadf" nivel="MEDIO"/>
+    <conocimiento denominacion="234(11)" nivel="MEDIO"/>
     <contacto>
-        <email>
-            <direccion>dsafadsf</direccion>
-        </email>
-        <telefono>
-            <numero>3452345</numero>
-            <tipoTelefono>MOVIL</tipoTelefono>
-        </telefono>
-        <web>
-            <url>http://32e4234</url>
-        </web>
+        <email direccion="ema"/>
+        <telefono numero="1234213" tipoTelefono="MOVIL"/>
+        <web url="http://ame.com"/>
     </contacto>
-    <experiencia>
-        <denominacion>gdsf</denominacion>
-        <desde/>
-        <empleador>dsfg</empleador>
-        <hasta/>
+    <experiencia desde="2019-12-11" hasta="2019-12-27">
+        <denominacion>1234</denominacion>
+        <empleador>1234</empleador>
     </experiencia>
-    <personal/>
+    <personal>
+        <apellidos>asdf</apellidos>
+        <codigoPostal>asdf</codigoPostal>
+        <direccion>asdf</direccion>
+        <fechaNacimiento>2019-12-14</fechaNacimiento>
+        <identificacion>asdf</identificacion>
+        <localidad>adsf</localidad>
+        <nombre>asdfadsf</nombre>
+        <pais>Antigua y Barbuda</pais>
+    </personal>
+    <titulo desde="2019-12-10" hasta="2019-12-26">
+        <denominacion>1234</denominacion>
+        <organizador>1234</organizador>
+    </titulo>
 </cv>

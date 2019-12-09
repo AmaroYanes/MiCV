@@ -67,6 +67,7 @@ public class PersonalController implements Initializable{
 	}
     public void initialize(URL location, ResourceBundle resources) {
     	
+    	nombreTextField.textProperty().bindBidirectional(curriculum.getPersonal().nombreProperty());
     	apellidosTextField.textProperty().bindBidirectional(curriculum.getPersonal().apellidosProperty());
     	datePicker.valueProperty().bindBidirectional(curriculum.getPersonal().fechaNacimientoProperty());
     	direccionArea.textProperty().bindBidirectional(curriculum.getPersonal().direccionProperty());
@@ -96,6 +97,10 @@ public class PersonalController implements Initializable{
 			e.printStackTrace();
 
 		}
+	}
+	public void setPais(String pais) {
+		paisTextField.setValue(pais);
+		
 	}
 
 }

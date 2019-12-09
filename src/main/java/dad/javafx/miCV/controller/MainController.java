@@ -105,8 +105,18 @@ public class MainController implements Initializable{
 			curriculum.getContacto().emailProperty().set(nuevoCV.getContacto().emailProperty());
 			curriculum.getContacto().webProperty().set(nuevoCV.getContacto().webProperty());
 			curriculum.getContacto().telefonoProperty().set(nuevoCV.getContacto().telefonoProperty());
-//			curriculum.experienciaProperty().set(nuevoCV.experienciaProperty());
-//			curriculum.tituloProperty().set(nuevoCV.tituloProperty());
+			curriculum.experienciaProperty().set(nuevoCV.experienciaProperty());
+			curriculum.tituloProperty().set(nuevoCV.tituloProperty());
+			curriculum.getPersonal().nombreProperty().set(nuevoCV.getPersonal().getNombre());
+			curriculum.getPersonal().apellidosProperty().set(nuevoCV.getPersonal().getApellidos());
+			curriculum.getPersonal().fechaNacimientoProperty().set(nuevoCV.getPersonal().getFechaNacimiento());
+			curriculum.getPersonal().direccionProperty().set(nuevoCV.getPersonal().getDireccion());
+			curriculum.getPersonal().nacionalidadProperty().set(nuevoCV.getPersonal().getNacionalidad());
+			curriculum.getPersonal().identificacionProperty().set(nuevoCV.getPersonal().getIdentificacion());
+			curriculum.getPersonal().codigoPostalProperty().set(nuevoCV.getPersonal().getCodigoPostal());
+			curriculum.getPersonal().localidadProperty().set(nuevoCV.getPersonal().getLocalidad());
+			personalController.setPais(nuevoCV.getPersonal().getPais());
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

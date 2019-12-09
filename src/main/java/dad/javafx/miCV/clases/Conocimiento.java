@@ -1,5 +1,7 @@
 package dad.javafx.miCV.clases;
 
+import javax.xml.bind.annotation.XmlAttribute;
+
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -19,7 +21,7 @@ public class Conocimiento {
 		return this.denominacion;
 	}
 	
-
+	@XmlAttribute
 	public final String getDenominacion() {
 		return this.denominacionProperty().get();
 	}
@@ -34,7 +36,7 @@ public class Conocimiento {
 		return this.nivel;
 	}
 	
-
+	@XmlAttribute
 	public final Nivel getNivel() {
 		return this.nivelProperty().get();
 	}
