@@ -14,9 +14,9 @@
         <denominacion>Técnico Superior en Aparcar Coches</denominacion>
         <organizador>CIFP Trolebus</organizador>
     </formacion>
-    <habilidades denominacion="Carnet de conducir B"/>
-    <habilidades denominacion="JavaFX" nivel="AVANZADO"/>
-    <habilidades xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="idioma" certificacion="B2" denominacion="Inglés" nivel="AVANZADO"/>
+    <Conocimientos denominacion="Carnet de conducir B"/>
+    <Conocimientos denominacion="JavaFX" nivel="AVANZADO"/>
+    <Conocimientos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="idioma" certificacion="B2" denominacion="Inglés" nivel="AVANZADO"/>
     <personal identificacion="12345678Z">
         <apellidos>Norris</apellidos>
         <codigoPostal>38204</codigoPostal>

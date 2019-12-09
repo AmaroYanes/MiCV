@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cv>
+    <conocimiento>
+        <denominacion>Fubol</denominacion>
+        <nivel>AVANZADO</nivel>
+    </conocimiento>
+    <conocimiento>
+        <denominacion>Frances(Oficial)</denominacion>
+        <nivel>AVANZADO</nivel>
+    </conocimiento>
+    <contacto>
+        <email>
+            <direccion>ajsdipadhnjsp@sadkfn</direccion>
+        </email>
+        <web>
+            <url>http://asdfasdfds.com</url>
+        </web>
+    </contacto>
+    <experiencia>
+        <denominacion>Prostibulo</denominacion>
+        <desde/>
+        <empleador>Chulo</empleador>
+        <hasta/>
+    </experiencia>
+    <personal>
+        <apellidos>Yanes</apellidos>
+        <codigoPostal>456233</codigoPostal>
+        <direccion>Calle</direccion>
+        <fechaNacimiento/>
+        <identificacion>1234145r</identificacion>
+        <localidad>asdasd</localidad>
+        <pais>Argentina</pais>
+    </personal>
+    <titulo>
+        <denominacion>Bachillerato</denominacion>
+        <desde/>
+        <hasta/>
+        <organizador>IES Persad</organizador>
+    </titulo>
+</cv>

@@ -1,10 +1,12 @@
 package dad.javafx.miCV.clases;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
+@XmlRootElement
 public class CV {
 	
 	//private ObjectProperty<Personal> personal = new SimpleObjectProperty<Personal>();

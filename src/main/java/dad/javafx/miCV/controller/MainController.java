@@ -1,8 +1,12 @@
 package dad.javafx.miCV.controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
+
+
 
 import dad.javafx.miCV.clases.CV;
 import javafx.fxml.FXML;
@@ -11,13 +15,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.Tab;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.VBox;
 
 public class MainController implements Initializable{
 	
 	//model
 	private static CV curriculum = new CV();
-	
+	//D:\CLASE\2DAM\eclipse-workspace\MiCurriculumVitae\src\main\resources\recursos\micurriculum.xml
+	private static File fichero = null;
 	
 	//controladores
 	private ConocimientosController conocimientosController = new ConocimientosController();
@@ -79,10 +85,54 @@ public class MainController implements Initializable{
 		experienciaTab.setContent(experienciaController.getView());
 		conocimientoTab.setContent(conocimientosController.getView());
 		nuevoMenuItem.setOnAction(e -> OnActionNuevo());
+		guardarMenuItem.setOnAction(e -> onActionGuardar());
+		guardarComoMenuItem.setOnAction(e -> onActionGuardarComo(false));
+		abrirMenuItem.setOnAction(e -> onActionAbrir());
 		
 		
 	}
 	
+	private void onActionAbrir() {
+		TextInputDialog dialog = new TextInputDialog("C:\\");
+		dialog.setTitle("Abrir");
+		dialog.setHeaderText("");
+		dialog.setContentText("Introduce el Path del fichero para cargar el CV");
+		Optional<String> result = dialog.showAndWait();
+		fichero = new File(result.get());
+		try {
+			curriculum = JAXBUtils.load(curriculum.getClass(), fichero);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	private void onActionGuardarComo(boolean existe) {
+
+		if (!existe) {
+			TextInputDialog dialog = new TextInputDialog("C:\\");
+			dialog.setTitle("Guardar Como");
+			dialog.setHeaderText("");
+			dialog.setContentText("Introduce el Path del fichero para guardar el CV");
+			Optional<String> result = dialog.showAndWait();
+			fichero = new File(result.get());
+		}
+		try {
+			JAXBUtils.save(curriculum, fichero);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+			
+	}
+
+	private void onActionGuardar() {
+		 if(fichero == null) {
+			 //si no tiene guardado el path de un fichero se llamara al guardar como en vez de dar un error
+			 onActionGuardarComo(false);
+		 }else {
+			 onActionGuardarComo(true);
+		}
+	}
+
 	private void OnActionNuevo() {
 		curriculum.tituloProperty().clear();
 		curriculum.experienciaProperty().clear();

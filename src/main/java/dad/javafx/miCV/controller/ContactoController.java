@@ -11,6 +11,7 @@ import dad.javafx.miCV.clases.Email;
 import dad.javafx.miCV.clases.Telefono;
 import dad.javafx.miCV.clases.TipoTelefono;
 import dad.javafx.miCV.clases.Web;
+import dad.javafx.miCV.controller.dialog.ContactoTelefonoDialogController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -156,7 +157,12 @@ public class ContactoController implements Initializable {
 	}
 
 	private void onActionAnyadirTelefono() {
-		
+		try {
+			ContactoTelefonoDialogController dialog = new ContactoTelefonoDialogController();
+			Optional<Telefono> result = dialog.showAndWait();
+			curriculum.getContacto().telefonoProperty().add(result.get());
+		} catch (NoSuchElementException e) {
+		}
 	}
 	public BorderPane getView() {
 		return view;

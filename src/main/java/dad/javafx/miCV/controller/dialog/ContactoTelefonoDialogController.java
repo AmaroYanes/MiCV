@@ -32,7 +32,7 @@ public class ContactoTelefonoDialogController extends Dialog<Telefono>{
 	
     public ContactoTelefonoDialogController() {
 		super();
-    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/DialogConocimientoView.fxml"));
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/DialogTelefonoContactoView.fxml"));
 		loader.setController(this);
 		try {
 			loader.load();
