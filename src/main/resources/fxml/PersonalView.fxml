@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<GridPane fx:id="view" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="294.0" minWidth="10.0" prefWidth="114.0" />
+    <ColumnConstraints hgrow="ALWAYS" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="70.0" minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+  </rowConstraints>
+   <children>
+      <Label text="DNI/NIE/Pasaporte">
+         <GridPane.margin>
+            <Insets right="3.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Nombre" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets right="3.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Apellidos" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets right="3.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Fecha de nacimiento" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets right="3.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Dirección" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets right="3.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Código Postal" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets right="3.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Localidad" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets right="3.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="País" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets right="3.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Nacionalidad" GridPane.rowIndex="8" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets right="3.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="nombreTextField" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+      <TextField fx:id="apellidosTextField" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+      <DatePicker fx:id="datePicker" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextArea fx:id="direccionArea" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS" />
+      <ListView fx:id="nacionalidadListView" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.vgrow="ALWAYS" />
+      <TextField fx:id="dniTextField" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
+      <TextField fx:id="codigoPostalTextField" maxWidth="-Infinity" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="5" />
+      <TextField fx:id="localidadTextField" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" />
+      <ComboBox fx:id="paisTextField" prefWidth="150.0" promptText="seleccione un país" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+   </children>
+   <padding>
+      <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+   </padding>
+</GridPane>
