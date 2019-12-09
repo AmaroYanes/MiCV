@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cv>
+    <conocimiento>
+        <denominacion>SDEF</denominacion>
+        <nivel>MEDIO</nivel>
+    </conocimiento>
+    <conocimiento>
+        <denominacion>asd(23)</denominacion>
+        <nivel>AVANZADO</nivel>
+    </conocimiento>
+    <contacto>
+        <email>
+            <direccion>dsafadsf</direccion>
+        </email>
+        <telefono>
+            <numero>3452345</numero>
+            <tipoTelefono>MOVIL</tipoTelefono>
+        </telefono>
+        <web>
+            <url>http://32e4234</url>
+        </web>
+    </contacto>
+    <experiencia>
+        <denominacion>gdsf</denominacion>
+        <desde/>
+        <empleador>dsfg</empleador>
+        <hasta/>
+    </experiencia>
+    <personal/>
+</cv>

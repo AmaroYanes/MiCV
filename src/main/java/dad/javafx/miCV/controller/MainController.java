@@ -22,7 +22,7 @@ public class MainController implements Initializable{
 	
 	//model
 	private static CV curriculum = new CV();
-	//D:\CLASE\2DAM\eclipse-workspace\MiCurriculumVitae\src\main\resources\recursos\micurriculum.xml
+	//D:\CLASE\2DAM\eclipse-workspace\MiCurriculumVitae\src\main\resources\recursos\PRUEBAS.xml
 	private static File fichero = null;
 	
 	//controladores
@@ -100,23 +100,29 @@ public class MainController implements Initializable{
 		Optional<String> result = dialog.showAndWait();
 		fichero = new File(result.get());
 		try {
-			curriculum = JAXBUtils.load(curriculum.getClass(), fichero);
+			CV nuevoCV = JAXBUtils.load(curriculum.getClass(), fichero);
+			curriculum.conocimientoProperty().set(nuevoCV.conocimientoProperty());
+			curriculum.getContacto().emailProperty().set(nuevoCV.getContacto().emailProperty());
+			curriculum.getContacto().webProperty().set(nuevoCV.getContacto().webProperty());
+			curriculum.getContacto().telefonoProperty().set(nuevoCV.getContacto().telefonoProperty());
+//			curriculum.experienciaProperty().set(nuevoCV.experienciaProperty());
+//			curriculum.tituloProperty().set(nuevoCV.tituloProperty());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
 	private void onActionGuardarComo(boolean existe) {
-
-		if (!existe) {
-			TextInputDialog dialog = new TextInputDialog("C:\\");
-			dialog.setTitle("Guardar Como");
-			dialog.setHeaderText("");
-			dialog.setContentText("Introduce el Path del fichero para guardar el CV");
-			Optional<String> result = dialog.showAndWait();
-			fichero = new File(result.get());
-		}
 		try {
+			if (!existe) {
+				TextInputDialog dialog = new TextInputDialog("C:\\");
+				dialog.setTitle("Guardar Como");
+				dialog.setHeaderText("");
+				dialog.setContentText("Introduce el Path del fichero para guardar el CV");
+				Optional<String> result = dialog.showAndWait();
+				fichero = new File(result.get());
+			}
+		
 			JAXBUtils.save(curriculum, fichero);
 		} catch (Exception e) {
 			e.printStackTrace();
