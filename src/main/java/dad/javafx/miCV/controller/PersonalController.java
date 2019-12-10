@@ -78,7 +78,8 @@ public class PersonalController implements Initializable{
     	// falta setearlo
     	leerPaises();
     	curriculum.getPersonal().paisProperty().bind(paisTextField.getSelectionModel().selectedItemProperty()); 
-	}
+ 
+    }
     
 	public GridPane getView() {
 		return view;

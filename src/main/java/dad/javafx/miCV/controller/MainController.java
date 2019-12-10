@@ -3,6 +3,7 @@ package dad.javafx.miCV.controller;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -22,7 +23,7 @@ public class MainController implements Initializable{
 	
 	//model
 	private static CV curriculum = new CV();
-	//D:\CLASE\2DAM\eclipse-workspace\MiCurriculumVitae\src\main\resources\recursos\PRUEBAS.xml
+	//F:\CLASE\2DAM\eclipse-workspace\MiCurriculumVitae\src\main\resources\recursos\PRUEBAS.xml
 	private static File fichero = null;
 	
 	//controladores
@@ -157,6 +158,14 @@ public class MainController implements Initializable{
 		curriculum.getContacto().webProperty().clear();
 		curriculum.getContacto().telefonoProperty().clear();
 		curriculum.getPersonal().setNombre(new String());
+		curriculum.getPersonal().setApellidos(new String());
+		curriculum.getPersonal().setDireccion(new String());
+		curriculum.getPersonal().setCodigoPostal(new String());
+		curriculum.getPersonal().setIdentificacion(new String());
+		personalController.setPais("Selecione un pais");
+		curriculum.getPersonal().setLocalidad(new String());
+		curriculum.getPersonal().setFechaNacimiento(null);
+		
 	}
 
 	public static CV getCurriculum() {
